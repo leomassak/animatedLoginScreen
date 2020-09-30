@@ -4,10 +4,6 @@
     padding: 0;
   }
   
-  html,
-  body {
-    height: 100vh;
-  }
   
   body {
     background-color: #1A1A1A;
@@ -16,11 +12,12 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    height: 100vh;
   }
   
   form {
-    width: 18vw;
-    height: 42vh;
+    width: 120%;
+    height: 45vh;
     overflow: hidden;
     padding-top: 50px;
     background-color: #2A2A2A;
@@ -29,6 +26,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    /*outline: none;*/
     animation: fade 700ms;
   }
   
@@ -47,8 +45,8 @@
   }
   
   form .input-block label {
-    font-size: 14px;
-    color: #990707;
+    font-size: 16px;
+    color: #c94757;
   }
   
   form .input-block input {
@@ -59,8 +57,12 @@
     color: white;
     border-radius: 2px;
     border: none;
-    outline-color: #990707;
+    /*outline-color: #990707;*/
     background-color: #525252;
+  }
+  form input:focus{
+    outline: none;
+    border: 2px solid #c94757;
   }
   
   form .btn-login {
@@ -69,10 +71,12 @@
     width: 70%;
     height: 15%;
     border: none;
-    background-color:#990707;
+    /*background-color:#a92737;*/
+    background-image: linear-gradient(to left,#c94757 50%,purple);
     color: white;
     border-radius: 25px;
     margin: auto;
+    outline: none;
     animation: move 700ms;
     animation-delay: 300ms;
     animation-fill-mode: backwards;
