@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html,
+  body {
+    height: 100vh;
+  }
+  
+  body {
+    background-color: #1A1A1A;
+    font-family: Roboto, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  form {
+    width: 18vw;
+    height: 42vh;
+    overflow: hidden;
+    padding-top: 50px;
+    background-color: #2A2A2A;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    animation: fade 700ms;
+  }
+  
+  form .input-block {
+    margin-bottom: 20px;
+    animation-name: move;
+    animation-duration: 500ms;
+  }
+
+  form .input-block:nth-child(2) {
+    margin-bottom: 20px;
+    animation-name: move;
+    animation-duration: 700ms;
+    animation-delay: 250ms;
+    animation-fill-mode: backwards;
+  }
+  
+  form .input-block label {
+    font-size: 14px;
+    color: #990707;
+  }
+  
+  form .input-block input {
+    display: block;
+    margin-top: 8px;
+    padding: 7px;
+    font-size: 16px;
+    color: white;
+    border-radius: 2px;
+    border: none;
+    outline-color: #990707;
+    background-color: #525252;
+  }
+  
+  form .btn-login {
+    display: block;
+    min-width: 120px;
+    width: 70%;
+    height: 15%;
+    border: none;
+    background-color:#990707;
+    color: white;
+    border-radius: 25px;
+    margin: auto;
+    animation: move 700ms;
+    animation-delay: 300ms;
+    animation-fill-mode: backwards;
+  }
+
+  .form-hide {
+    animation: down 1.2s forwards;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .validate-error {
+    animation: taunt 250ms, fade paused;
+  }
+
+  .squares li {
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.2);
+      display: block;
+      position: absolute;
+      bottom: -40px;
+      animation: up 2s infinite alternate;
+    }
+
+  @keyframes move {
+      from {
+          opacity: 0;
+          transform: translateX(-35%);
+      }
+      to {
+          opacity: 1;
+          transform: translateX(0%);
+      }
+  }
+
+  @keyframes fade {
+      from {
+          opacity: 0;
+          transform: scale(0.8);
+      }
+      to {
+          opacity: 1;
+          transform: scale(1);
+      }
+  }
+
+  @keyframes down {
+      from {
+          transform: translateY(0);
+      }
+      to {
+          transform: translateY(100vh);
+      }
+  }
+
+  @keyframes taunt {
+      0%,
+      100% {
+        transform: translateX(0);
+      }
+      35% {
+        transform: translateX(-10%);
+      }
+      70% {
+        transform: translateX(10%);
+      }
+  }
+
+  @keyframes up {
+     from {
+         opacity: 0;
+         transform: translateY(0);
+     }
+     50%{
+         opacity: 1;
+     }
+     to {
+        opacity: 0;
+        transform: translateY(-1000px) rotate(950deg);
+     }
+  }
